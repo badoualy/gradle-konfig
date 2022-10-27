@@ -8,6 +8,7 @@ buildscript {
             name = "test"
             url = uri("../test-repository")
         }
+        mavenLocal()
         gradlePluginPortal()
         google()
         mavenCentral()

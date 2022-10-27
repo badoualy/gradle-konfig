@@ -3,7 +3,6 @@ package fr.sjcqs.konfig
 import fr.sjcqs.task.ConfigurationGenerationTask
 import fr.sjcqs.task.TaskConfiguration
 import fr.sjcqs.task.TaskConfigurationFactory
-import fr.sjcqs.utils.get
 import fr.sjcqs.utils.pathJoin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -25,7 +24,8 @@ open class KonfigPlugin : Plugin<Project> {
                 outputDirectory
             )
             variant.registerJavaGeneratingTask(task, outputDirectory)
-            configuration.sourceSets[variant.name].java.srcDir(outputDirectory)
+            // not needed
+            // configuration.sourceSets[variant.name].java.srcDir(outputDirectory)
         }
     }
 
